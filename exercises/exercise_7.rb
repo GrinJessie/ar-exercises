@@ -10,3 +10,17 @@ puts "Exercise 7"
 puts "----------"
 
 # Your code goes here ...
+# Ask the user for a store name (store it in a variable)
+# Attempt to create a store with the inputted name but leave out the other fields (annual_revenue, mens_apparel, and womens_apparel)
+# Display the error messages provided back from ActiveRecord to the user (one on each line) after you attempt to save/create the record
+
+puts "enter a store name to create a new row in db"
+employee = gets.chomp
+
+# new_store = Store.new(name: store_name, annual_revenue: 100000, mens_apparel: false, womens_apparel: false)
+# new_store.valid?
+# puts new_store.errors.messages
+
+new_employee = Employee.new(first_name: employee, hourly_rate: 10)
+new_employee.valid?
+puts new_employee.errors.messages
